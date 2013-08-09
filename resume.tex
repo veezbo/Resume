@@ -1,0 +1,188 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+%\pagenumbering{arabic}
+\pagenumbering{gobble}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[4]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip 
+			{#3}\\ \smallskip
+			{#4}\smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contact Info
+\begin{center} 
+	{\Large \scshape Vibhor Kumar} 
+\end{center}
+	\vspace*{-2pt}
+\hspace{40mm} MSC \#623 \hspace{31mm} vibhor@caltech.edu \\
+\hspace{28mm} Pasadena, CA 91126-0623 \hspace{24mm} (513) 293-1138 \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+\smallskip
+\begin{body}
+	\vspace{14pt}
+	\textbf{California Institute of Technology}{}, \emph{Computer Science} \hfill \emph{Graduating Class of 2016}{} \\
+	\begin{itemize} \itemsep -0pt
+	\item Computer Graphics (CS 171) and GPU Programming (CS 179), Data Structures and Algorithms (CS 38), Decidability and Tractability (CS 21), Introductory Machine Learning (self-study), Research for Credit (CS 81), Computer Graphics Projects (CS 174)
+	\smallskip
+	\item Differential Equations (Ma2a), Multivariable Calculus (Ma1c), Linear Algebra (Ma1b), Probability and Statistics (Ma2b)
+	\end{itemize}
+\end{body}
+
+%\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Work and Experience}
+\medskip
+\begin{body}
+	\vspace{14pt}
+	\textbf{Samsung Mobile R\&D}, \emph{Testing Automation Developer} \hfill \emph{July - September 2013}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt %reduce space between items
+	\item Developing testing suites for enterprise security applications and their derivatives by working with Android testing tools and bash/python scripting for full automation.
+	\item Directly involved in the development process as well by creating and optimizing apps that provide a UI interface to testing suites.
+	\item Working alongside my team by handling automation and development, as well as creating test cases for various parts of the overall testing suite.
+	\end{itemize}
+	\textbf{ChoiceFork}, \emph{Researcher} \hfill \emph{May 2013 - Present}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Building up from scratch the logistics of improving decision making on the internet. Will eventually shift to a development role as the methodology becomes clear.
+	\end{itemize}
+\smallskip
+	\textbf{Vora Labs}, \emph{Testing and Software Development} \hfill \emph{Summer 2012}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Created unit tests with JUnit for all parts of the development on the backend, while additionally developing various backend and frontend tasks as needed.
+		\item Worked on API implementations for efficient product and search recommendations.
+	\end{itemize}
+\smallskip
+	\textbf {Computer Science Student Faculty Committee (CSSFC)}, \emph{Student Rep} \hfill \emph{2012-2013 (Present)}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Working with other representatives and the CS faculty to respond to the change in core classes for next year and institute new, revised CS degree requirements.
+	\end{itemize}
+
+	
+\end{body}
+
+%\smallskip
+
+% \newpage{} % uncomment this line if you want to force a new page
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Projects
+\header{Selected Projects}
+\medskip
+\begin{body}
+	\vspace{14pt}
+	\textbf{Edge-Preserving Linear-Time Smoothing Optimization}, \emph{CS174 Research} \hfill \emph{March 2013 - June 2013} \\
+	\begin{itemize} \itemsep -0pt
+		\item Optimizing an edge-preserving linear-time smoothing filter algorithm (Gastal, Oliviera; SIGGRAPH 2011), and implementing both a CPU and GPU version with novel improvements.
+	\end{itemize}
+	\textbf{Automated Inbetweening between Noisy Keyframes}, \emph{CS81 Research} \hfill \emph{Dec. 2012 - March 2013} \\
+	\begin{itemize} \itemsep -0pt
+		\item Using ideas from both Computer Graphics and Applied Math to develop a generalized method that solves the research problem and is faithful to the artist's intent.
+	\end{itemize}
+	\textbf{Beal's Conjecture and Distributed Computing} \hfill \emph{Spring 2012 - Present}
+	\begin{itemize} \itemsep -0pt
+		\item Developing a parallelizable algorithm for efficiently checking larger values for the variables in Beal's Conjecture, an unsolved generalization of Fermat's Last Theorem.
+	\end{itemize}
+
+\end{body}
+
+%\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{Skills and Awards}
+\medskip
+\begin{body}
+	\vspace{14pt}
+	
+	\begin{itemize} \itemsep -0pt
+	
+	\item \textbf{Skills:} Java (Eclipse, NetBeans, IntelliJ), C/C++ (Visual Studio), Python (IDLE, Pyscripter), Android, R, Octave, Mathematica, Bash Scripting, \LaTeX (Gummi), ANTLR, OpenGL and JOGL, GLSL, CUDA, Sublime Text, Notepad++, Emacs, Gedit, SVN and RabbitVCS, Git and Github ( \textbf{github.com/veezbo} )\\
+	\medskip
+	\item \textbf{Awards:} Marion Gene Vincenti Scholarship (Caltech Scholarship, \emph{Spring 2013}), 
+	Frances and Howard Vesper Scholarship (Caltech Scholarship, \emph{Spring 2013}), 
+	1st place Google Games Coding Competition (\emph{Spring 2013}), 
+	11th Place Regional ACM Collegiate Programming Contest (\emph{Winter 2012}), 
+	Association for Computing Machinery Membership, (\emph{Spring 2013}),
+	Top 5 in Silver Division on USA Computing Olympiad US Open Contest (\emph{Spring 2012}),
+	Honda-OSU Math Medal (\emph{Spring 2012}),
+	1st Place American Computer Science League Contest (\emph{Spring 2012}).
+	\end{itemize}
+\end{body}
+
+\end{document}
